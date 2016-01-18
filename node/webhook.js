@@ -7,7 +7,11 @@ var query = require('querystring');
 var message = JSON.stringify(
 {
     command: "message",
-    data: "Hello, this is a test message!"
+    data:
+    {
+        channel: "#wetfish",
+        text: "Hello, this is a test message!"
+    }
 });
 
 console.log("Generating hash...");

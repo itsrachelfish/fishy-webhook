@@ -6,7 +6,11 @@ require "config.php";
 $message = json_encode(array
 (
     'command' => "message",
-    'data' => "Hello, this is a message from PHP!"
+    'data' => array
+    (
+        'channel' => '#wetfish',
+        'text' => "Hello, this is a message from PHP!"
+    )
 ));
 
 echo "Generating hash...\n";
